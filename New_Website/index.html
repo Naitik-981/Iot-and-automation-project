@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arduino Project Data</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="main-container">
+        <div class="project-title">
+            <h1>Arduino Project Data</h1>
+            <p>Real-time sensor data from ThingSpeak:</p>
+        </div>
+        <div class="sensor-wrap">
+            <div class="sensor">
+                <div class="title">
+                    <h2>Sensor1</h2>
+                </div>
+                <div class="humidity">
+                    <label>Humidity:</label>
+                    <span id="humidity1">Loading...</span><span>%</span>
+                </div>
+                <div class="temperature">
+                    <label>Temperature:</label>
+                    <span id="temperature1">Loading...</span><span>°C</span>
+                </div>
+                <div class="iframe">
+                    <iframe width="450" height="260" style="border: 1px solid #cccccc;"
+                        src="https://thingspeak.com/channels/2717430/widgets/956675"></iframe>
+                </div>
+                <div class="charts">
+                    <button id="chart1" onclick="window.location.href='Analytics/sensor1'">Show Charts</button>
+                </div>
+            </div>
+
+            <div class="sensor">
+                <div class="title">
+                    <h2>Sensor2</h2>
+                </div>
+                <div class="humidity">
+                    <label>Humidity:</label>
+                    <span id="humidity2">Loading...</span><span>%</span>
+                </div>
+                <div class="temperature">
+                    <label>Temperature:</label>
+                    <span id="temperature2">Loading...</span><span>°C</span>
+                </div>
+                <div class="iframe">
+                    <iframe width="450" height="260" style="border: 1px solid #cccccc;"
+                        src="https://thingspeak.com/channels/2717430/widgets/972711"></iframe>
+                </div>
+                <div class="charts">
+                    <button id="chart2" onclick="window.location.href='Analytics/sensor2'">Show Charts</button>
+                </div>
+            </div>
+        </div>
+        <div class="led">
+            <div class="title">
+                <h2>LED Control</h2>
+            </div>
+            <div class="led-control">
+                <h3>LED Status : <span id="led-status" class="off">OFF</span> </h3>
+                <button id="led">Toggle LED</button>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>

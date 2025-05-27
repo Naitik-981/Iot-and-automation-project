@@ -1,0 +1,149 @@
+/* General Body Styles */
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: linear-gradient(135deg, #f4f4f9, #e0e0eb);
+    color: #333;
+}
+
+/* Main Container */
+.main-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+    background: #fff;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    width: 90%;
+    max-width: 1200px;
+}
+
+/* Project Title Section */
+.project-title {
+    grid-column: 1 / -1;
+    text-align: center;
+    background-color: #1e979b;
+    color: #fff;
+    padding: 20px;
+    border-radius: 12px;
+}
+
+.project-title h1 {
+    margin: 0;
+    font-size: 2rem;
+}
+
+.project-title p {
+    margin: 5px 0 0;
+    font-size: 1.2rem;
+}
+
+/* Sensor Wrapper */
+.sensor-wrap {
+    grid-column: 1 / -1;
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* Side-by-side by default */
+    gap: 20px;
+}
+
+/* Sensor Section */
+.sensor {
+    background-color: #f0fdfdd7;    
+    border: 1px solid #1e979b;
+    border-radius: 12px;
+    padding: 15px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.sensor .title h2 {
+    margin: 0;
+    font-size: 1.5rem;
+    color: #1e979b;
+}
+
+/* Humidity and Temperature */
+.sensor .humidity,
+.sensor .temperature {
+    font-size: 1.2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+}
+
+.sensor .humidity label,
+.sensor .temperature label {
+    font-weight: bold;
+    color: #555;
+}
+
+/* Button Styles */
+button {
+    background-color: #1e979b;
+    color: #fff;
+    border: none;
+    border-radius: 6px;
+    padding: 10px 20px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #176f74;
+}
+
+/* LED Section */
+.led {
+    grid-column: 1 / -1;
+    background-color: #f0fdfdd7;
+    border: 1px solid #1e979b;
+    border-radius: 12px;
+    text-align: center;
+    padding: 20px;
+}
+
+.led h3 {
+    margin: 10px 0;
+    font-size: 1.5rem;
+    color: #555;
+}
+
+.led #led-status {
+    font-weight: bold;
+}
+
+.led button {
+    margin-top: 10px;
+}
+
+.off{
+    color: #007072;
+}
+
+.on{
+    color: #d30404;
+}
+/* Responsive Design */
+/* Medium Screens: Stack sensors vertically */
+@media (max-width: 1099px) {
+    .sensor-wrap {
+        grid-template-columns: 1fr; /* Stack sensors vertically */
+    }
+}
+
+/* Small Screens: Hide iframes */
+@media (max-width: 535px) {
+    .iframe iframe {
+        display: none; /* Hide iframes on very small screens */
+    }
+}
